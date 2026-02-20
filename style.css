@@ -1,8 +1,0 @@
-video {
-    width: 500px; /* Set a fixed width for the video */
-    height: auto;
-    display: block;
-    margin: auto; Center the video horizontally
-    border-radius: 50px; /* Smooth rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}   
