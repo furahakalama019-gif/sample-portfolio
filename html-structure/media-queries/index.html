@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightblue;
+            color: darkblue;
+            padding: 10px;
+        }
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+            }
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            button {
+                background-color: green;
+            }
+        }
+    </style>
+    <title>Media Queries Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Media Queries Example</h1>
+    <p>Resize the browser window to see the effect of media queries.</p>
+    <button>Click Me</button>
+    <script>
+        function printPage() {
+            window.print();
+        }
+    </script>
+    <button onclick="printPage()">Print Page</button>
+</body>
+</html>  
+    
+
+        
+    

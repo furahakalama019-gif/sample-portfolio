@@ -1,0 +1,12 @@
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    header {
+        padding: 0.5rem;
+    }
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+}
