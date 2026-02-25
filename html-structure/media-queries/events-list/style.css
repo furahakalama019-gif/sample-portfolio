@@ -1,0 +1,518 @@
+/* Sidebar and Grid side-by-side on Desktop */
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* The Grid Logic */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    /* Default: Mobile (1 column) */
+}
+
+/* Requirement: Hover animation */
+.event-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px); /* Makes it lift up */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Adds a shadow for depth */
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* This targets the container holding all your event cards */
+.events-grid {
+    display: grid;
+    gap: 20px;
+    /* Default: Mobile (1 column) */
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.event-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: white;
+    /* This makes the movement smooth when hovering */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    /* Lift the card up */
+    transform: translateY(-8px);
+    /* Add a subtle shadow for depth */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* On desktop, make the layout horizontal with the sidebar */
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .filters-sidebar {
+        width: 250px;
+        position: sticky;
+        top: 20px;  
+    }
+}
+
+/* Set the main layout so Sidebar and Grid sit side-by-side */
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style the Grid Container */
+.events-grid {
+    display: grid;
+    gap: 20px;
+    flex-grow: 1; /* Makes the grid take up remaining space next to sidebar */
+
+    /* Default: Mobile (1 column) */
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.event-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: white;
+    /* This makes the movement smooth when hovering */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    /* Lifts the card up slightly */
+    transform: translateY(-10px);
+    /* Adds a subtle shadow to make it 'pop' */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+/* Banner Styling */
+.event-banner img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    object-fit: cover; /* Ensures the image covers the area without distortion */}
+
+
+/* Details Layout */
+.details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Requirement: Organizer info card styling */
+.organizer-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+/* Requirement: Timeline Styling */
+.timeline {
+    border-left: 2px solid #007bff;
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    left: -27px;
+    top: 5px;
+}
+
+/* Requirement: Register button */
+.register-button {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Page 3 Styles */
+.details-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.event-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.organizer-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fdfdfd;
+}
+
+/* Requirement: Timeline UI */
+.timeline {
+    border-left: 2px solid #333;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Requirement: Gallery Grid */
+.gallery-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Requirement: Register Button */
+.register-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* Remove dedault link styling */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Makes the whole area clickable */
+}
+
+/* Ensure the hover effect still works on the card inside the link */
+.card-link .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+/* Container for the timeline */
+.timeline {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 30px;
+    border-left: 2px solid #ddd; /* The vertical line */
+}
+
+/* Individual timeline items */
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* The dot on the line */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff; /*Change to your desired color*/
+    border: 2px solid white;
+    border-radius: 50%;
+    left: -37px; /* Matches the left padding of the timeline plus half the dot's width */
+    top: 5px;
+    z-index: 1;
+}
+
+.timeline-time {
+    font-weight: bold;
+    color: #222;
+    display: block;
+}
+
+.timeline-description {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #333;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps it above the timeline and cards */
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Matches your timeline dot color */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Gallery Layout */
+.gallery-grid {
+    display: grid; /* This creates 3 columns on desktop, 1 on mobile automatically */
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Crops the image to fit the box without stretching */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fun extra: zoom the image slightly when hovered */
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+/* Map UI Styling */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures the map doesn't spill out of the container */
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #e5e5e5; /* Represents the map background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+/* Creating a simple Map Pin with CSS */
+.map-pin {
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d4d;
+    border-radius: 50% 50% 50% 0; /* Creates the pin shape */
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px; /* Centers the pin horizontally */
+    margin-top: -20px; /* Adjusts the pin vertically so the point is at the center */
+    margin-bottom: 10px;
+}
+
+.address-card {
+    padding: 20px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+/* Registration Section Container */
+.registration-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+/* Registration Button Styling */
+.register-button {
+    padding: 15px 40px;
+    background-color: #28a745; /* Professional green color */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Rounded pill shape */
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the registration button */
+.register-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Active Effect (When clicked) */
+.register-button:active {
+    transform: scale(0.98);
+}
+
+.main-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px; /* Pushes footer away from the content */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+.footer-social p {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Tablet/Desktop layout for footer */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}

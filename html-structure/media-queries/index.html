@@ -1,47 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
-        body {
-            background-color: lightblue;
-            color: darkblue;
-            padding: 10px;
-        }
-        @media print {
-            body {
-                background-color: white;
-                color: black;
-            }
-        }
-        button {
-            background-color: blue;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-        @media (max-width: 600px) {
-            button {
-                background-color: green;
-            }
-        }
-    </style>
-    <title>Media Queries Example</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Media Queries Example</h1>
-    <p>Resize the browser window to see the effect of media queries.</p>
-    <button>Click Me</button>
-    <script>
-        function printPage() {
-            window.print();
-        }
-    </script>
-    <button onclick="printPage()">Print Page</button>
-</body>
-</html>  
-    
+    <head>
+        <title>My Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <body>
+     <div class="flex items-center justify-center min-h-screen bg-gray-100 p-6">
+    <div class="bg-white rounded-2x1 shadow-lg overflow-hidden max-w-sm md:max-w-2x1 md:flex">
+        <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://via.placeholder.com/300" alt="Product Image">
+        </div>
+        <div class="p-8">
+            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Case Study</div>
+            <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Finding customers for your new business</a>
+            <p class="mt-2 text-gray-500">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+            <div class="mt-4">
+                <a href="#" class="text-indigo-600 hover:text-indigo-900 font-semibold">Read more</a>
+                <span class="text-gray-500 ml-2">→</span>
+                <button class="ml-4 bg-blue-500 text-white px-3 py-1 rounded">Buy Now</button>
+                Add to Cart
+                </button>
+            </div>    
+        </div>
+    </div>
+</div>
+ </body>
+ </head>
         
     
